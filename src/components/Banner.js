@@ -13,7 +13,7 @@ function Banner() {
   ];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
+  const period = 500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -41,7 +41,7 @@ function Banner() {
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(500);
+      setDelta(200);
     }
   };
 
@@ -54,12 +54,15 @@ function Banner() {
             <h1>
               <span className="wrap">{text}</span>
             </h1>
-            <p>
-              Hello and we are the University of San Carlos Computer Engineering
-              Council. This website will feature the beauty of the field as well
-              as the projects that we have prepared for our co-students.
-              Together, let us be Always One Step Closer To The Future.
-            </p>
+            <div className="glass-container">
+              <p>
+                Hello and we are the University of San Carlos Computer
+                Engineering Council. This website will feature the beauty of the
+                field as well as the projects that we have prepared for our
+                co-students. Together, let us be Always One Step Closer To The
+                Future.
+              </p>
+            </div>
             <button onClick={() => console.log("connect")}>
               Let's Connect <ArrowRightCircle size={25} />
             </button>

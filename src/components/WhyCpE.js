@@ -45,8 +45,7 @@ export const WhyCpE = () => {
               <Carousel
                 responsive={responsive}
                 infinite={true}
-                className="owl-carousel owl-theme skill-slider"
-              >
+                className="owl-carousel owl-theme skill-slider">
                 <div className="item">
                   <img src={feature1} alt="Image" />
                   <h5>High Demand</h5>
